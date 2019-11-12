@@ -22,7 +22,7 @@ margin-botom:0px;
 const Devider = styles.div`
 width:1px;
 height:30vh;
-background:aliceblue;
+background: ${(props)=>props.theme.ternarycolor};
 align-self: center;
 `
 

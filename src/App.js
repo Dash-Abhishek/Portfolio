@@ -19,8 +19,9 @@ height: 100vh;
 `
 
 const theme = {
-  primarycolor:"#ebb41f",
-  secondarycolor: "aliceblue"
+  primarycolor:"aliceblue",
+  secondarycolor: "aliceblue",
+  ternarycolor: "#ff5722"
 }
 
 function App() {

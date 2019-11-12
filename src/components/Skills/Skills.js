@@ -24,7 +24,7 @@ const Skills =()=>{
     return(
         <Canvas>
             <SubHeading>Languages</SubHeading>
-            <LanguageSection/>
+            
         </Canvas>
 
     )
