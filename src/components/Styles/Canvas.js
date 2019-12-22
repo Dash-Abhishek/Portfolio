@@ -8,7 +8,7 @@ min-height: 80vh;
 background: #1a1a1f38;
 flex-wrap:wrap;
 justify-content: center;
-margin:50px
+margin: 50px 50px 10px 50px;
 `
 
 export default Canvas;

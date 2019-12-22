@@ -29,7 +29,7 @@ font-size: 20px;
 
 const Logo = styles(Link)`
 flex:1;
-color: #ffffff;
+color: ${(props)=>props.theme.ternarycolor};
 font-size: 30px;
 font-weight: bold;
 text-decoration: none;
@@ -57,7 +57,7 @@ const Navbar = () => {
     return (
 
         <NavBar>
-            <Logo to="/">Portfolio</Logo>
+            <Logo to="/">AD</Logo>
 
             <NavLinks>
 
@@ -65,6 +65,7 @@ const Navbar = () => {
                 <NavLink to="/skills">Skills</NavLink>
                 <NavLink to="/projects">Projects</NavLink>
                 <NavLink to="/contact">Contact</NavLink>
+                <NavLink to="/login">Login</NavLink>
 
             </NavLinks>
 
