@@ -4,27 +4,28 @@ import Canvas from '../Styles/Canvas'
 import Bar from '../Styles/Bar'
 import Devider from '../Styles/Devider';
 import Tiles from '../Styles/Tiles';
+import fullstacklogo from '../../assets/fullstack_banner.png';
 
 
 const SubHeading = styles.div`
-font-size: 25px;
+font-size: 30px;
 color :${(props) => props.theme.ternarycolor};
 margin-top:10px;
 `
 
 const Body = styles.div`
-font-size: 15px;
+font-size: 20px;
 color :${(props) => props.theme.secondarycolor};
 `
 
 const SkillSections = styles.div`
+
 display:flex;
 flex-direction: column;
 flex:1;
-
 margin:50px;
 // background: ${(props) => props.theme.pannelcolor}
-width:200px;
+min-width:200px;
 `
 
 const Pannel = styles.div`
@@ -48,8 +49,16 @@ color: ${(props) => props.theme.secondarycolor};
  
 `
 
+const Services = styles.div`
+align-items:ceter;
+color: ${(props) => props.theme.secondarycolor};
+ 
+`
+const Fullstack_banner = styles.img.attrs({
+    src:fullstacklogo
+})`
 
-
+`
 
 
 const Skills = () => {
@@ -90,23 +99,32 @@ const Skills = () => {
                     <Body>React.Js</Body>
                     <RatingBar><Bar /><Bar /><Bar /></RatingBar>
                 </Pannel>
-                <Pannel>
-                    <Body>------</Body>
-                    <RatingBar><Bar /><Bar /><Bar /></RatingBar>
-                </Pannel>
+                
 
             </SkillSections>
-            <Devider />
 
-
+            <Devider/>
+            
             <SkillSections >
 
                 <SubHeading>Certifications</SubHeading>
                 <Pannel>
                     <Body>AWS Certified Solutions Architect - Associate</Body>
+                    <br></br>
                     <Body>Jan 05, 2019 - Jan 05, 2022</Body>
                 </Pannel>
-                <SubHeading>Subheading</SubHeading>
+
+
+                <SubHeading>Service Offerings</SubHeading>
+                <Pannel>
+                    <KeySkills>
+                        <Tiles>Web development</Tiles><Tiles>Chat bots</Tiles>
+                        <Tiles>Cloud native app development</Tiles>
+                    </KeySkills>
+                </Pannel>
+                
+
+                <SubHeading>Key skills</SubHeading>
                 <Pannel>
                     <KeySkills>
                         <Tiles>Microservices</Tiles><Tiles>REST</Tiles>
@@ -117,12 +135,10 @@ const Skills = () => {
                     </KeySkills>
                 </Pannel>
 
-            </SkillSections>
-            <Devider />
-            <SkillSections >
                 
             </SkillSections>
-
+            
+            
         </Canvas>
 
     )

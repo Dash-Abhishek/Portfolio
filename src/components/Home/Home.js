@@ -2,6 +2,7 @@ import React from 'react';
 import styles from 'styled-components';
 import Canvas from '../Styles/Canvas';
 import Devider from '../Styles/Devider';
+import fullstacklogo from '../../assets/fullstack_banner.png';
 
 
 
@@ -9,11 +10,11 @@ const PosterSection = styles.div`
 flex:1;
 display: flex;
 flex-direction: column;
-background: ${(props) => props.theme.pannelcolor};
+// background: ${(props) => props.theme.pannelcolor};
 align-items: center;    
 justify-content: space-around;
-width:auto;
-height:auto;
+min-width:200px;
+min-height:auto;
 margin:50px;
 margin-botom:0px;
 `
@@ -41,12 +42,19 @@ color: white;
 `
 
 
+const Fullstack_banner = styles.img.attrs({
+    src:fullstacklogo
+})`
+
+`
+
 
 const Home = () => {
 
     return (
         <Canvas>
             <PosterSection>
+                <Fullstack_banner></Fullstack_banner>
             {/* <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="abhishek-dash-232937106"><a class="LI-simple-link" href='https://in.linkedin.com/in/abhishek-dash-232937106?trk=profile-badge'></a></div> */}
             {/* <img src ="/public/profilepic.jpg"/> */}
             </PosterSection>

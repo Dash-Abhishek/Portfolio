@@ -10,6 +10,10 @@ align-items: center;
 min-height: 8vh;
 margin-left:50px;
 margin-right:50px;
+@media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-end;
+  }
 `
 
 const NavLinks = styles.ul`
@@ -17,6 +21,11 @@ display : flex;
 flex:1;
 justify-content: space-around;
 flex-basis: 30%;
+@media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-end;
+    
+  }
 `
 const NavLink = styles(Link)`
 color: #ffffff;

@@ -2,7 +2,7 @@ import styles from 'styled-components';
 
 
 const Bar = styles.div`
-width: 35px;
+width: 50px;
 height: 7px;
 background: aliceblue;
 border-radius: 5px;

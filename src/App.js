@@ -12,12 +12,18 @@ import LoginPage from './components/LoginPage/LoginPage';
 
 
 const Container = styles.div`
+display:flex;
+flex-direction:column;
 background-color: #2d3436;
 background-image: linear-gradient(360deg, #1976D2 0%, #000000 74%);
 flex: 1;
 resizeMode: 'cover'
 width: 180vh;
-height: 100vh;
+min-height: 100vh;
+
+@media (max-width: 768px) {
+  flex-direction: row-reverse;
+}
 `
 
 const theme = {
