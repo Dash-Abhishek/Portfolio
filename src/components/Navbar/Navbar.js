@@ -1,6 +1,9 @@
 import React from 'react';
 import styles from 'styled-components';
 import { Link } from 'react-router-dom';
+import {useState} from 'react';
+
+
 
 
 const NavBar = styles.div`
@@ -27,10 +30,10 @@ flex-basis: 30%;
     height:50vh;
     top: 8vh;
     right: 0px;
-    
     align-items: flex-start;
     // transform: translateX(100%);
-    display:none;
+    // display:none;    
+    
   }
 `
 const NavLink = styles(Link)`
@@ -68,7 +71,6 @@ display:flex;
 flex-direction:column;
 align-items:center;
 display:none;
-
 @media (max-width: 768px) {
     display:block;
     max-width:20px;
@@ -79,12 +81,15 @@ display:none;
 
 const Navbar = () => {
 
+
+    const [disabled, setDisabled] = useState("none");
+
     return (
 
         <NavBar>
             <Logo to="/">AD</Logo>
 
-            <NavLinks>
+            <NavLinks >
 
                 <NavLink to="/">Home</NavLink>
                 <NavLink to="/skills">Skills</NavLink>
@@ -94,7 +99,7 @@ const Navbar = () => {
 
             </NavLinks>
 
-            <MenuIcon>
+            <MenuIcon onClick={(e)=>console.log("jashgdja")}> 
                 <Line></Line>
                 <Line></Line>
                 <Line></Line>
