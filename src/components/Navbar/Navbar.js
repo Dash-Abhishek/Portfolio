@@ -24,7 +24,7 @@ flex-basis: 30%;
     justify-content: space-around;
     flex-direction: column;
     position: absolute;
-    height:80vh;
+    height:50vh;
     top: 8vh;
     right: 0px;
     align-items: flex-start;
