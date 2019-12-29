@@ -21,9 +21,6 @@ resizeMode: 'cover'
 width: 180vh;
 min-height: 100vh;
 
-@media (max-width: 768px) {
-  flex-direction: row-reverse;
-}
 `
 
 const theme = {

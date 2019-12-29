@@ -54,7 +54,7 @@ const Home = () => {
     return (
         <Canvas>
             <PosterSection>
-                <Fullstack_banner></Fullstack_banner>
+                {/* <Fullstack_banner></Fullstack_banner> */}
             {/* <div class="LI-profile-badge"  data-version="v1" data-size="medium" data-locale="en_US" data-type="vertical" data-theme="light" data-vanity="abhishek-dash-232937106"><a class="LI-simple-link" href='https://in.linkedin.com/in/abhishek-dash-232937106?trk=profile-badge'></a></div> */}
             {/* <img src ="/public/profilepic.jpg"/> */}
             </PosterSection>
@@ -62,7 +62,7 @@ const Home = () => {
             <Devider />
 
             <BioSection>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
             <Button onClick={event=>{console.log("Download button clicked")}} href="https://101personaldocs.s3.amazonaws.com/Abhishek's+Resume.pdf" download>Download</Button>
             </BioSection>
 

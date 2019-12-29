@@ -10,10 +10,7 @@ align-items: center;
 min-height: 8vh;
 margin-left:50px;
 margin-right:50px;
-@media (max-width: 768px) {
-    flex-direction: column;
-    align-items: flex-end;
-  }
+
 `
 
 const NavLinks = styles.ul`
@@ -22,8 +19,17 @@ flex:1;
 justify-content: space-around;
 flex-basis: 30%;
 @media (max-width: 768px) {
+    display : flex;
+    flex:1;
+    justify-content: space-around;
     flex-direction: column;
-    align-items: flex-end;
+    position: absolute;
+    height:80vh;
+    top: 8vh;
+    right: 0px;
+    align-items: flex-start;
+    transform: translateX(100%);
+
     
   }
 `
@@ -33,6 +39,10 @@ text-decoration: none;
 font-size: 20px;
 &:focus, &:hover, &:visited, &:link, &:active {
     text-decoration: none;
+
+    @media (max-width:768px){
+        color:black;
+    }
 }
 `
 
@@ -59,6 +69,14 @@ flex:1;
 display:flex;
 flex-direction:column;
 align-items:center;
+display:none;
+
+@media (max-width: 768px) {
+    display:block;
+    max-width:20px;
+    max-height 10px;
+    
+  }
 `
 
 const Navbar = () => {
