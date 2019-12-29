@@ -10,11 +10,11 @@ const PosterSection = styles.div`
 flex:1;
 display: flex;
 flex-direction: column;
-// background: ${(props) => props.theme.pannelcolor};
+background: ${(props) => props.theme.pannelcolor};
 align-items: center;    
 justify-content: space-around;
 min-width:200px;
-min-height:auto;
+min-height:200px;
 margin:50px;
 margin-botom:0px;
 `

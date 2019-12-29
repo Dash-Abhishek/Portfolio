@@ -27,10 +27,10 @@ flex-basis: 30%;
     height:50vh;
     top: 8vh;
     right: 0px;
-    align-items: flex-start;
-    transform: translateX(100%);
-
     
+    align-items: flex-start;
+    // transform: translateX(100%);
+    display:none;
   }
 `
 const NavLink = styles(Link)`
@@ -40,9 +40,7 @@ font-size: 20px;
 &:focus, &:hover, &:visited, &:link, &:active {
     text-decoration: none;
 
-    @media (max-width:768px){
-        color:black;
-    }
+    
 }
 `
 
