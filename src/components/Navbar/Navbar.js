@@ -2,6 +2,10 @@ import React from 'react';
 import styles from 'styled-components';
 import { Link } from 'react-router-dom';
 import {useState} from 'react';
+import homeSvg from '../../assets/home.svg';
+import contactSvg from '../../assets/contact.svg'
+import skillsSvg from '../../assets/skills.svg'
+import projectsSvg from '../../assets/skills2.svg'
 
 
 
@@ -29,6 +33,7 @@ flex-basis: 30%;
     position: absolute;
     height:50vh;
     top: 8vh;
+    width: ${({ show }) => show ? '100px' : '0'}
     right: 0px;
     align-items: flex-start;
     // transform: translateX(100%);
@@ -79,27 +84,62 @@ display:none;
   }
 `
 
+const HomeLogo = styles.img.attrs({
+    src:homeSvg
+})`
+height:40px;
+`
+
+
+const SkillsLogo = styles.img.attrs({
+    src:skillsSvg
+})`
+height:40px;
+`
+
+const ProjectsLogo = styles.img.attrs({
+    src:projectsSvg
+})`
+height:40px;
+`
+
+const ContactLogo = styles.img.attrs({
+    src:contactSvg
+})`
+height:40px
+`
+
+
+// const HomeLogo = styles.img.attrs({
+//     src:homeSvg
+// })``
+
+
+// const HomeLogo = styles.img.attrs({
+//     src:homeSvg
+// })``
+
 const Navbar = () => {
 
 
-    const [disabled, setDisabled] = useState("none");
+    const [showSideNav, setShowSideNav] = useState(false);
 
     return (
 
         <NavBar>
             <Logo to="/">AD</Logo>
 
-            <NavLinks >
+            <NavLinks show={ showSideNav }>
 
-                <NavLink to="/">Home</NavLink>
-                <NavLink to="/skills">Skills</NavLink>
-                <NavLink to="/projects">Projects</NavLink>
-                <NavLink to="/contact">Contact</NavLink>
-                <NavLink to="/login">Login</NavLink>
+                <NavLink to="/" onClick={()=>setShowSideNav(!showSideNav)}><HomeLogo/></NavLink>
+                <NavLink to="/skills" onClick={()=>setShowSideNav(!showSideNav)}><SkillsLogo/></NavLink>
+                <NavLink to="/projects" onClick={()=>setShowSideNav(!showSideNav)}><ProjectsLogo/></NavLink>
+                <NavLink to="/contact" onClick={()=>setShowSideNav(!showSideNav)}><ContactLogo/></NavLink>
+                <NavLink to="/login" onClick={()=>setShowSideNav(!showSideNav)}>Login</NavLink>
 
             </NavLinks>
 
-            <MenuIcon onClick={(e)=>console.log("jashgdja")}> 
+            <MenuIcon onClick={()=>setShowSideNav(!showSideNav)}> 
                 <Line></Line>
                 <Line></Line>
                 <Line></Line>
